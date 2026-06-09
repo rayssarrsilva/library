@@ -45,11 +45,11 @@ svg {
     gap: 20px;
 }
 
-#my-books > h3 {
-    position: relative;
-    left: 50%;
-    top: 85px;
-
+#my-books h3 {
+    text-align: center;
+    padding-left: 50vw;
+    margin-top: 15vh;
+    font-size: 1.4rem;
 }
 
 #my-books {
