@@ -4,10 +4,42 @@
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Jomolhari", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #header {
     background-color: var(--grey);
-    height: 150px;
+    height: 100px;
     width: 100vw;
     position: fixed;
     top: 0;
+}
+
+.left-header> svg {
+    width: 3rem;
+}
+
+svg {
+    width: 20px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-header {
+    display: flex;
+    gap: 30px;
+    padding-left: 100px;
+}
+
+#header-right {
+    display: flex;
+    padding-right: 119px;
+    gap: 20px;
 }
