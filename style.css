@@ -52,7 +52,12 @@ svg {
     font-size: 1.4rem;
 }
 
-#my-books {
+#my-books > h3 {
     display: flex;
     align-items: center;
+}
+
+#my-books .shelf h3 {
+    font-size: 18px;
+    font-family: "Kiwi Maru", serif;
 }
