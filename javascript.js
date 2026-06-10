@@ -20,9 +20,11 @@ shelfTitle.addEventListener("click", () => {
 })
 
 inputAmount.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && inputAmount.value <= 12) {
         const value = inputAmount.value.trim();
+        shelfQuestion.classList.toggle("ativo");
+        inputAmount.value = "";
+    } else if (inputAmount.value > 12) {
+        alert("Please, Digit a value less than 12")
     }
-    shelfQuestion.classList.toggle("ativo");
-    inputAmount.value = "";
 })
