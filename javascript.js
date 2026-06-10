@@ -10,7 +10,7 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary() {}
 
-// Hover over the h3: My books, Logic & creation of shelf.
+// Hover over the h3: My books, Design e animaton Logic & creation of shelf.
 const shelfTitle = document.getElementById("shelf-title");
 const shelfQuestion = document.getElementById("shelf-question");
 const inputAmount = document.getElementById("booksAmount");
@@ -33,3 +33,10 @@ inputAmount.addEventListener("keydown", (event) => {
     }
 })
 
+// click the plus button design logic
+const plusButton = document.getElementById("plus");
+plusButton.addEventListener("click", (event) => {
+    if (event.key === "click") {
+        
+    }
+})

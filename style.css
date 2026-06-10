@@ -2,6 +2,7 @@
     --grey: #D9D9D9;
     margin: 0;
     padding: 0;
+    --white: #FFFFFF;
     --main-font: "Jomolhari", serif;
     --darker-grey: #B5B2B2;
 }
@@ -106,7 +107,7 @@ svg {
     font-family: var(--main-font);
 }
 
-#shelf-question #booksAmount:focus {
+#shelf-question #booksAmount:focus, .left-add input{
     border: none;
     outline: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
@@ -123,4 +124,93 @@ svg {
     border-radius: 5px;
     border: none;
     background-color: var(--darker-grey);
+}
+
+#add-book {
+    width: 478px;
+    height: 221px;
+    font-family: var(--main-font);
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.left-add {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.add-content {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 0 15px 8px 10px;
+    padding-bottom: 10px;
+    gap: 65px;
+}
+
+.top-add {
+    display: flex;
+    gap: 15px;
+}
+
+.top-add svg {
+    width: 27px;
+}
+
+.bottom-add {
+    display: flex;
+    gap: 15px;
+}
+
+#add-book h3 {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+#add-book input, #add-book input::placeholder {
+    border: none;
+    border-radius: 10px;
+    width: 181px;
+    height: 31px;
+    font-size: 15px;
+    color: var(--white);
+    box-shadow: 0 4 4 0 rgba(0,0,0,0.25);
+    background-color: var(--darker-grey);
+}
+
+.right-add svg{
+    fill: var(--darker-grey);
+}
+
+.right-add h4 {
+    color: var(--white);
+}
+
+#add-book input::placeholder {
+    font-weight: 550;
+}
+
+.right-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-add button {
+    color: var(--white);
+    border-radius: 50px;
+    width: 78px;
+    font-size: 15px;
+    border: none;
+    height: 49px;
+    background-color: var(--darker-grey);
+}
+
+#shelf-question .buttom-question svg{
+    fill: var(--darker-grey);
 }
