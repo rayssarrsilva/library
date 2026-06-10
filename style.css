@@ -64,7 +64,7 @@ svg {
     display: none;
 }
 
-#shelf-question.ativo, #shelf-question{
+#shelf-question.ativo{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,10 +74,11 @@ svg {
     font-size: 13px;
     width: 424px;
     height: auto;
+    letter-spacing: 2px;
     padding-bottom: 15px;
 }
 
-#shelf-question.ativo #booksAmount,  #shelf-question #booksAmount{
+#shelf-question.ativo #booksAmount{
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     background-color: #B5B2B2;
@@ -91,4 +92,11 @@ svg {
     border: none;
     outline: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+#shelfs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
