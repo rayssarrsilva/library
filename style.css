@@ -45,7 +45,7 @@ svg {
     gap: 20px;
 }
 
-#my-books h3 {
+#my-books > h3 {
     text-align: center;
     padding-left: 50vw;
     margin-top: 15vh;
@@ -55,4 +55,12 @@ svg {
 #my-books {
     display: flex;
     align-items: center;
+}
+
+#shelf-question {
+    display: none;
+}
+#shelf-question.ativo {
+    display: flex;
+    background-color: var(--grey);
 }
