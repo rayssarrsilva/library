@@ -1,3 +1,18 @@
+// click the plus button design logic
+const plusButton = document.getElementById("plus");
+const addBook = document.getElementById("add-book");
+
+plusButton.addEventListener("click", () => {
+    addBook.classList.toggle("appear");
+})
+
+// read or not icon 
+const read = document.getElementById("read-or-not");
+read.addEventListener("click", () => {
+    read.classList.toggle("read");
+})
+
+// logic of: saving the books and creating the books
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -13,10 +28,17 @@ function addBookToLibrary() {
     const author = document.getElementById("Author");
     const pages = document.getElementById("Pages");
 
-
-    const newBook = new Book(title, author, pages, read);
+    const readOrNot = read.classList.contains("read");
+    const newBook = new Book(title.value, author.value, pages.value, readOrNot);
     myLibrary.push(newBook);
+    console.log(myLibrary);
 }
+
+const addButton = document.getElementById("add");
+addButton.addEventListener("click", () => {
+    addBookToLibrary();
+    addBook.classList.remove("appear");
+})
 
 function DeleteBook(){
 
@@ -45,16 +67,3 @@ inputAmount.addEventListener("keydown", (event) => {
     }
 })
 
-// click the plus button design logic
-const plusButton = document.getElementById("plus");
-const addBook = document.getElementById("add-book");
-
-plusButton.addEventListener("click", () => {
-    addBook.classList.toggle("appear");
-})
-
-// read or not icon 
-const read = document.getElementById("read-or-not");
-read.addEventListener("click", () => {
-    read.classList.toggle("read");
-})
