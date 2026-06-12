@@ -133,7 +133,11 @@ svg {
 }
 
 #add-book {
-    opacity: 1;
+    display: none;
+}
+
+#add-book.appear {
+    display: flex;
     width: 478px;
     height: 221px;
     font-family: var(--main-font);
