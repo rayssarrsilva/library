@@ -3,6 +3,13 @@ const plusButton = document.getElementById("plus");
 const addBook = document.getElementById("add-book");
 
 plusButton.addEventListener("click", () => {
+    // clean the form values
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+
+    read.classList.remove("read");
+
     addBook.classList.toggle("appear");
 })
 
@@ -27,8 +34,8 @@ const title = document.getElementById("Title");
 const author = document.getElementById("Author");
 const pages = document.getElementById("Pages");
 
+const readOrNot = read.classList.contains("read");
 function addBookToLibrary() {
-    const readOrNot = read.classList.contains("read");
     const newBook = new Book(title.value, author.value, pages.value, readOrNot);
     myLibrary.push(newBook);
     console.log(myLibrary);
@@ -41,7 +48,6 @@ const closeButton = document.getElementById("close");
 addButton.addEventListener("click", () => {
     addBookToLibrary();
     addBook.classList.remove("appear");
-
 })
 
 closeButton.addEventListener("click", () => {
