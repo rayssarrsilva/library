@@ -237,3 +237,10 @@ svg {
 #read-or-not {
     fill: var(--darker-grey);
 }
+
+/*Books of shelf in html*/
+.set-one div {
+    width: 38px;
+    height: 73px;
+    color: blue;
+}
