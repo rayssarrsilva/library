@@ -1,4 +1,4 @@
-// click the plus button design logic
+// click the plus button design logic and logic
 const plusButton = document.getElementById("plus");
 const addBook = document.getElementById("add-book");
 
