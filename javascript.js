@@ -23,11 +23,11 @@ function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
 }
 
-function addBookToLibrary() {
-    const title = document.getElementById("Title");
-    const author = document.getElementById("Author");
-    const pages = document.getElementById("Pages");
+const title = document.getElementById("Title");
+const author = document.getElementById("Author");
+const pages = document.getElementById("Pages");
 
+function addBookToLibrary() {
     const readOrNot = read.classList.contains("read");
     const newBook = new Book(title.value, author.value, pages.value, readOrNot);
     myLibrary.push(newBook);
@@ -36,9 +36,16 @@ function addBookToLibrary() {
 
 // Execute the create book logic when you click the add button 
 const addButton = document.getElementById("add");
+const closeButton = document.getElementById("close");
+
 addButton.addEventListener("click", () => {
     addBookToLibrary();
     addBook.classList.remove("appear");
+
+})
+
+closeButton.addEventListener("click", () => {
+    addBook.classList.toggle("appear");
 })
 
 function DeleteBook(){
