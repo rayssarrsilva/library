@@ -48,8 +48,14 @@ svg {
     gap: 20px;
 }
 
+#my-books {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #my-books > h3 {
-    text-align: center;
     padding-left: 50vw;
     margin-top: 15vh;
     font-size: 1.4rem;
@@ -92,7 +98,7 @@ svg {
     border-radius: 25px;
     font-size: 13px;
     width: 424px;
-    height: auto;
+    height: 79px;
     letter-spacing: 2px;
     padding-bottom: 15px;
 }
@@ -213,10 +219,4 @@ svg {
 
 #shelf-question .buttom-question svg{
     fill: var(--darker-grey);
-}
-
-
-#my-books .shelf h3 {
-    font-size: 18px;
-    font-family: "Kiwi Maru", serif;
 }
