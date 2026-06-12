@@ -231,3 +231,9 @@ svg {
     fill: var(--darker-grey);
 }
 
+#read-or-not.read {
+    fill: green;
+}
+#read-or-not {
+    fill: var(--darker-grey);
+}

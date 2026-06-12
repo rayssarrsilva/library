@@ -8,7 +8,19 @@ function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
 }
 
-function addBookToLibrary() {}
+function addBookToLibrary() {
+    const title = document.getElementById("Title");
+    const author = document.getElementById("Author");
+    const pages = document.getElementById("Pages");
+
+
+    const newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
+}
+
+function DeleteBook(){
+
+}
 
 // Hover over the h3: My books, Design e animaton Logic & creation of shelf.
 const shelfTitle = document.getElementById("shelf-title");
@@ -22,7 +34,7 @@ shelfTitle.addEventListener("click", () => {
 
 inputAmount.addEventListener("keydown", (event) => {
     if (event.key === "Enter" && inputAmount.value <= 12) {
-        const value = inputAmount.value.trim();
+        const value = inputAmount.value.trim(); // book quantity
         shelfQuestion.classList.toggle("ativo");
         shelf.style.display = "flex";
 
@@ -41,3 +53,8 @@ plusButton.addEventListener("click", () => {
     addBook.classList.toggle("appear");
 })
 
+// read or not icon 
+const read = document.getElementById("read-or-not");
+read.addEventListener("click", () => {
+    read.classList.toggle("read");
+})
