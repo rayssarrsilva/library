@@ -81,3 +81,5 @@ inputAmount.addEventListener("keydown", (event) => {
     }
 })
 
+// add the books in the shelf design
+const colors = ["1B0F88", "EFB027", "EF3127", "0F8817"];
