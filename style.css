@@ -133,13 +133,19 @@ svg {
 }
 
 #add-book {
+    opacity: 1;
     width: 478px;
     height: 221px;
     font-family: var(--main-font);
     background-color: var(--grey);
-    display: flex;
     flex-direction: column;
     border-radius: 10px;
+}
+
+#center-add-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-add {
@@ -220,3 +226,4 @@ svg {
 #shelf-question .buttom-question svg{
     fill: var(--darker-grey);
 }
+

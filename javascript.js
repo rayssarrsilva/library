@@ -35,8 +35,9 @@ inputAmount.addEventListener("keydown", (event) => {
 
 // click the plus button design logic
 const plusButton = document.getElementById("plus");
-plusButton.addEventListener("click", (event) => {
-    if (event.key === "click") {
-        
-    }
+const addBook = document.getElementById("add-book");
+
+plusButton.addEventListener("click", () => {
+    addBook.classList.toggle("appear");
 })
+
