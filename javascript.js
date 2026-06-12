@@ -12,7 +12,7 @@ read.addEventListener("click", () => {
     read.classList.toggle("read");
 })
 
-// logic of: saving the books and creating the books
+// logic of: saving the books, creating and sending them to the storage
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -34,6 +34,7 @@ function addBookToLibrary() {
     console.log(myLibrary);
 }
 
+// Execute the create book logic when you click the add button 
 const addButton = document.getElementById("add");
 addButton.addEventListener("click", () => {
     addBookToLibrary();
