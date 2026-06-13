@@ -261,6 +261,25 @@ svg {
     height: 73px;
     border-radius: 5px;
     border: none;
-    background-color: #0F8817;
 }
 
+#shelfs {
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.book1 {
+    background-color: var(--blue);
+}
+
+.book2 {
+    background-color: var(--yellow);
+}
+
+.book3 {
+    background-color: var(--red);
+}
+
+.book4 {
+    background-color: var(--green);
+}
