@@ -250,7 +250,7 @@ svg {
     color: blue;
 }
 
-#shelfs, .book {
+.book {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -266,6 +266,8 @@ svg {
 #shelfs {
     justify-content: space-around;
     align-items: flex-end;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .book1 {
@@ -283,3 +285,4 @@ svg {
 .book4 {
     background-color: var(--green);
 }
+
