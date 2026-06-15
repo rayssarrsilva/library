@@ -35,9 +35,10 @@ const title = document.getElementById("Title");
 const author = document.getElementById("Author");
 const pages = document.getElementById("Pages");
 
-const readOrNot = read.classList.contains("read");
 
 function addBookToLibrary() {
+    const readOrNot = read.classList.contains("read");
+
     const newBook = new Book(title.value, author.value, pages.value, readOrNot);
     myLibrary.push(newBook);
 };
@@ -49,6 +50,8 @@ const closeButton = document.getElementById("close");
 const slots = document.querySelectorAll("#shelfs div div");
 const slotsArray = Array.from(slots);
 
+let currentShelf;
+
 addButton.addEventListener("click", () => {
 
     if (shelfCapacity === 0) {
@@ -56,15 +59,14 @@ addButton.addEventListener("click", () => {
         return;
     }
 
-    if (myLibrary.length >= shelfCapacity) {
+    if (currentShelf.length >= currentShelf.capacity) {
         alert("Actual shelf is full, Create another shelf before");
         return;
     }
 
     addBookToLibrary();
     addBook.classList.remove("appear");
-
-    const book = myLibrary[myLibrary.length - 1];
+    addBookToShelf();
 });
 
 closeButton.addEventListener("click", () => {
@@ -87,6 +89,8 @@ inputAmount.addEventListener("keydown", (event) => {
         const value = inputAmount.value.trim(); // book quantity
         shelfCapacity = value;
         
+        createShelf(shelfCapacity);
+
         shelfQuestion.classList.toggle("ativo");
         shelf.style.display = "flex";
 
@@ -102,9 +106,6 @@ inputAmount.addEventListener("keydown", (event) => {
 });
 
 // add the books in the shelf design
-const colors = ["1B0F88", "EFB027", "EF3127", "0F8817"];
-
-let currentShelf;
 
 function createShelf(capacity) {
     const row = document.createElement("div");
@@ -119,6 +120,25 @@ function createShelf(capacity) {
     currentShelf = row;
 }
 
-function addBookToShelf(book) {
-    
+function addBookToShelf() {
+    if (!currentShelf) {
+        alert("Create a shelf first");
+        return;
+    }
+
+    if (currentShelf.books >= currentShelf.capacity) {
+        alert("This shelf is full");
+        return;
+    }
+
+    const book = document.createElement("div");
+    book.classList.add("book", "visible");
+
+    const colors = ["#1B0F88", "#EFB027", "#EF3127", "#0F8817"];
+
+    book.style.backgroundColor = colors[currentShelf.books % colors.length];
+
+    currentShelf.appendChild(book);
+
+    currentShelf.books++;
 }
