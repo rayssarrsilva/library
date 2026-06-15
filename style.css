@@ -125,10 +125,6 @@ svg {
     gap: 20px;
     margin: 0 auto 0 auto;
     width: 80%;
-    height: 111px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--darker-grey);
 }
 
 #add-book {
@@ -257,7 +253,11 @@ svg {
 
 .shelf-row {
     display: flex;
-    flex-direction: row;
     align-items: flex-end;
+    flex-direction: row;
     gap: 20px;
+
+    height: 111px;
+    border-radius: 5px;
+    background-color: var(--darker-grey);
 }
