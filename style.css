@@ -249,3 +249,8 @@ svg {
     opacity: 0;
 }
 
+.book.visible {
+    opacity: 1;
+    width: 38px;
+    height: 73px;
+}

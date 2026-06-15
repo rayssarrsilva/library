@@ -104,3 +104,21 @@ inputAmount.addEventListener("keydown", (event) => {
 // add the books in the shelf design
 const colors = ["1B0F88", "EFB027", "EF3127", "0F8817"];
 
+let currentShelf;
+
+function createShelf(capacity) {
+    const row = document.createElement("div");
+    
+    row.classList.add("shelf-row");
+
+    row.capacity = capacity;
+    row.books = 0;
+
+    document.getElementById("shelfs").appendChild(row);
+
+    currentShelf = row;
+}
+
+function addBookToShelf(book) {
+    
+}
