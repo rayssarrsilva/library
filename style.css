@@ -5,6 +5,11 @@
     --white: #FFFFFF;
     --main-font: "Jomolhari", serif;
     --darker-grey: #B5B2B2;
+
+    --blue: #1B0F88;
+    --yellow: #EFB027;
+    --red: #EF3127;
+    --green: #0F8817;
 }
 
 h1, h2, h3, h4, h5, h6 {
