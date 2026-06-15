@@ -244,3 +244,8 @@ svg {
     height: 73px;
     color: blue;
 }
+
+.book {
+    opacity: 0;
+}
+
