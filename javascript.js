@@ -153,8 +153,8 @@ function addBookToShelf() {
         const bookTitle = document.createElement("h3");
         const bookPages = document.createElement("h6");
 
-        showBook.appendChild(bookTitle);
         showBook.appendChild(bookAuthor);
+        showBook.appendChild(bookTitle);
         showBook.appendChild(bookPages);
 
         showBook.classList.toggle("visible");

@@ -275,6 +275,11 @@ svg {
     border-left: 20px solid black;
     color: black;
     font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 5%;
 }
 
 #info-books {
@@ -288,3 +293,14 @@ svg {
     opacity: 0;
 }
 
+#show-book.visible h3 {
+    font-size: 20px;
+    align-self: flex-start;
+    padding-left: 60px;
+}
+
+#show-book.visible h6 {
+    font-size: 12px;
+    align-self: flex-end;
+    padding-right: 40px;
+}
