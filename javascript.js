@@ -120,6 +120,11 @@ function createShelf(capacity) {
     currentShelf = row;
 }
 
+const book = document.createElement("div");
+book.classList.add("book", "visible");
+
+
+
 function addBookToShelf() {
     if (!currentShelf) {
         alert("Create a shelf first");
@@ -141,4 +146,37 @@ function addBookToShelf() {
     currentShelf.appendChild(book);
 
     currentShelf.books++;
+
+    book.addEventListener("click", (event) => {
+        const showBook = document.getElementById("show-book");
+        const bookAuthor = document.createElement("p");
+        const bookTitle = document.createElement("h3");
+        const bookPages = document.createElement("h6");
+
+        showBook.appendChild(bookTitle);
+        showBook.appendChild(bookAuthor);
+        showBook.appendChild(bookPages);
+
+        showBook.classList.toggle("visible");
+        shelfTitle.classList.toggle("invisible");
+        shelf.classList.toggle("invisible");
+        book.classList.toggle("visible");
+
+        bookTitle.textContent = title.value;
+        bookPages.textContent = pages.value;
+        bookAuthor.textContent = author.value;
+
+        if (bookTitle.addEventListener("click", () => {
+            bookTitle.textContent = "";
+            bookPages.textContent = "";
+            bookAuthor.textContent = "";
+
+            showBook.classList.toggle("visible");
+            book.classList.toggle("visible");
+            shelf.classList.toggle("invisible");
+            shelfTitle.classList.toggle("invisible");
+
+            return;
+        }));
+    });
 }

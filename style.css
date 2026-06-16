@@ -266,3 +266,23 @@ svg {
     border-radius: 5px;
     background-color: var(--darker-grey);
 }
+
+#show-book.visible {
+    width: 380px;
+    height: 434px;
+    border-radius: 20px;
+    background-color: var(--grey);
+    border-left: 20px solid black;
+    color: black;
+}
+
+#info-books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#shelf-title.invisible, #shelfs.invisible {
+    display: none;
+    opacity: 0;
+}
