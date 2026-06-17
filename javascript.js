@@ -146,9 +146,9 @@ function addBookToShelf() {
     currentShelf.appendChild(book);
 
     currentShelf.books++;
+    book.shelf = currentShelf;
 
     book.setAttribute("title", actualBook.read ? "read" : "not read");
-
     
     book.addEventListener("click", (event) => {
         showBook.innerText = "";
@@ -175,5 +175,24 @@ function addBookToShelf() {
             shelfTitle.classList.remove("invisible");
             return;
         });
+    });
+
+    book.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+
+        const remove = confirm(`Delete ${book.actualBook.title} ?`);
+
+        if (!remove) {
+            return;
+        }
+
+        const index = myLibrary.findIndex(
+            find => find.id === book.actualBook.id
+        );
+
+        myLibrary.splice(index, 1);
+        book.remove();
+
+        book.shelf.books--;
     });
 }
