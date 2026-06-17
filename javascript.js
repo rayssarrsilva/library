@@ -146,6 +146,9 @@ function addBookToShelf() {
     currentShelf.appendChild(book);
 
     currentShelf.books++;
+
+    book.setAttribute("title", actualBook.read ? "read" : "not read");
+
     
     book.addEventListener("click", (event) => {
         showBook.innerText = "";
