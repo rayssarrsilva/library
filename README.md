@@ -16,12 +16,6 @@ This project allows users to create bookshelves with custom capacities, add book
 - Delete books using right-click
 - Hover over books to see reading status
 - Unique ID generation for every book
-- Form validation:
-  - Title required
-  - Author required
-  - Pages required
-  - Pages must contain only numbers
-
 ## Built With
 
 - HTML5
