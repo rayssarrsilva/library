@@ -268,6 +268,7 @@ svg {
 }
 
 #show-book.visible {
+    position: fixed;
     width: 380px;
     height: 434px;
     border-radius: 20px;
@@ -280,6 +281,7 @@ svg {
     align-items: center;
     justify-content: space-between;
     letter-spacing: 5%;
+    top: 30%;
 }
 
 #info-books {

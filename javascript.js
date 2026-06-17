@@ -146,16 +146,19 @@ function addBookToShelf() {
     currentShelf.appendChild(book);
 
     currentShelf.books++;
-
+    
     book.addEventListener("click", (event) => {
+        showBook.innerText = "";
 
         const bookAuthor = document.createElement("p");
         const bookTitle = document.createElement("h3");
         const bookPages = document.createElement("h6");
 
-        showBook.append(bookTitle, bookAuthor, bookPages);
+        showBook.append(bookAuthor, bookTitle, bookPages);
 
         showBook.classList.add("visible");
+        shelf.classList.add("invisible");
+        shelfTitle.classList.add("invisible");
 
         bookTitle.textContent = book.actualBook.title;
         bookPages.textContent = book.actualBook.pages;
@@ -165,6 +168,8 @@ function addBookToShelf() {
             showBook.innerText = "";
 
             showBook.classList.remove("visible");
+            shelf.classList.remove("invisible");
+            shelfTitle.classList.remove("invisible");
             return;
         });
     });
