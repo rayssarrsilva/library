@@ -59,7 +59,7 @@ addButton.addEventListener("click", () => {
         return;
     }
 
-    if (currentShelf.length >= currentShelf.capacity) {
+    if (currentShelf.books >= currentShelf.capacity) {
         alert("Actual shelf is full, Create another shelf before");
         return;
     }
@@ -120,11 +120,6 @@ function createShelf(capacity) {
     currentShelf = row;
 }
 
-const book = document.createElement("div");
-book.classList.add("book", "visible");
-
-
-
 function addBookToShelf() {
     if (!currentShelf) {
         alert("Create a shelf first");
@@ -139,6 +134,11 @@ function addBookToShelf() {
     const book = document.createElement("div");
     book.classList.add("book", "visible");
 
+    const actualBook = myLibrary[myLibrary.length - 1];
+    book.actualBook = actualBook;
+
+    const showBook = document.getElementById("show-book");
+
     const colors = ["#1B0F88", "#EFB027", "#EF3127", "#0F8817"];
 
     book.style.backgroundColor = colors[currentShelf.books % colors.length];
@@ -148,35 +148,24 @@ function addBookToShelf() {
     currentShelf.books++;
 
     book.addEventListener("click", (event) => {
-        const showBook = document.getElementById("show-book");
+
         const bookAuthor = document.createElement("p");
         const bookTitle = document.createElement("h3");
         const bookPages = document.createElement("h6");
 
-        showBook.appendChild(bookAuthor);
-        showBook.appendChild(bookTitle);
-        showBook.appendChild(bookPages);
+        showBook.append(bookTitle, bookAuthor, bookPages);
 
-        showBook.classList.toggle("visible");
-        shelfTitle.classList.toggle("invisible");
-        shelf.classList.toggle("invisible");
-        book.classList.toggle("visible");
+        showBook.classList.add("visible");
 
-        bookTitle.textContent = title.value;
-        bookPages.textContent = pages.value;
-        bookAuthor.textContent = author.value;
+        bookTitle.textContent = book.actualBook.title;
+        bookPages.textContent = book.actualBook.pages;
+        bookAuthor.textContent = book.actualBook.author;
 
-        if (bookTitle.addEventListener("click", () => {
-            bookTitle.textContent = "";
-            bookPages.textContent = "";
-            bookAuthor.textContent = "";
+        bookTitle.addEventListener("click", () => {
+            showBook.innerText = "";
 
-            showBook.classList.toggle("visible");
-            book.classList.toggle("visible");
-            shelf.classList.toggle("invisible");
-            shelfTitle.classList.toggle("invisible");
-
+            showBook.classList.remove("visible");
             return;
-        }));
+        });
     });
 }
