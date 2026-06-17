@@ -83,5 +83,6 @@ Feel free to:
 
 - Fork the project and open a Pull Request
 - Contact me through LinkedIn
+- Add commits or commentaries in english
 
 Every contribution helps make the project better.
