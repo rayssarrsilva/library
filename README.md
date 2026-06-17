@@ -61,6 +61,7 @@ During this project I practiced:
 - Responsive mobile layout
 
 ## Live Demo
+<img width="1920" height="881" alt="library" src="https://github.com/user-attachments/assets/f34140ff-6217-408e-88dc-5742729f4b62" />
 
 ## Screenshot
 ![alt text](image.png)
@@ -69,6 +70,7 @@ During this project I practiced:
 Rayssa Roberta
 
 ## Figma 
+
 in the following link you can see my creation of the layout in figma, including future parts that might be add
 
 https://www.figma.com/design/kfQfAnbDQ7rrUrEC9YEWA7/Library?t=c4XtVPgaikrmIuhY-1
