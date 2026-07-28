@@ -11,7 +11,7 @@ export default function Validate() {
         } else if (!/^\d+$/.test(value)) {
             books.setCustomValidity("Numbers only.");
         }
-    });
 
-    books.reportValidity();
+        books.reportValidity();
+    });
 }
