@@ -210,11 +210,6 @@ function Validate() {
     const author = document.getElementById("Author");
     const pages = document.getElementById("Pages");
 
-    books.required = true;
-    title.required = true;
-    author.required = true;
-    pages.required = true;
-
     function validateBooks() {
         const value = books.value.trim();
 
