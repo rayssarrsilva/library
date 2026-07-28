@@ -3,6 +3,9 @@ const plusButton = document.getElementById("plus");
 const addBook = document.getElementById("add-book");
 let shelfCapacity = 0;
 
+import Validate from "./validation";
+Validate();
+
 plusButton.addEventListener("click", () => {
     // clean the form values
     title.value = "";

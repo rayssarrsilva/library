@@ -1,43 +1,49 @@
 export default function Validate() {
     const books = document.getElementById("booksAmount");
+    const title = document.getElementById("Title");
+    const author = document.getElementById("Author");
+    const pages = document.getElementById("Pages");
 
-    books.addEventListener("input", () => {
+    books.required = true;
+    title.required = true;
+    author.required = true;
+    pages.required = true;
+
+    function validateBooks() {
         const value = books.value.trim();
 
         if (value === "") {
             books.setCustomValidity("Enter the number of books.");
-        } else if (value < 1 || value > 16){
-            books.setCustomValidity("Choose a value between 1 and 16.");
         } else if (!/^\d+$/.test(value)) {
             books.setCustomValidity("Numbers only.");
+        } else if (+value < 1 || +value > 16) {
+            books.setCustomValidity("Choose a value between 1 and 16.");
+        } else {
+            books.setCustomValidity("");
         }
 
         books.reportValidity();
-    });
+    }
 
-    const title = document.getElementById("Title.");
-
-    title.addEventListener("input", () => {
+    function validateTitle() {
         const value = title.value.trim();
 
-        if (value === ""){
+        if (value === "") {
             title.setCustomValidity("Enter the book title.");
         } else if (value.length < 2) {
-            title.setCustomValidity("Title must containt at least 2 characters.");
+            title.setCustomValidity("Title must contain at least 2 characters.");
         } else {
             title.setCustomValidity("");
         }
 
         title.reportValidity();
-    });
+    }
 
-    const author = document.querySelector("#Author");
-    
-    author.addEventListener("input", () => {
+    function validateAuthor() {
         const value = author.value.trim();
 
         if (value === "") {
-            author.setCustomValidity("Author is required.");
+            author.setCustomValidity("Enter the author name.");
         } else if (value.length < 2) {
             author.setCustomValidity("Author name is too short.");
         } else {
@@ -45,11 +51,9 @@ export default function Validate() {
         }
 
         author.reportValidity();
-    });
+    }
 
-    
-    const pages = document.querySelector("#Pages");
-    pages.addEventListener("input", () => {
+    function validatePages() {
         const value = pages.value.trim();
 
         if (value === "") {
@@ -65,6 +69,33 @@ export default function Validate() {
         }
 
         pages.reportValidity();
-    });
+    }
 
+    books.addEventListener("input", validateBooks);
+    books.addEventListener("blur", validateBooks);
+
+    title.addEventListener("input", validateTitle);
+    title.addEventListener("blur", validateTitle);
+
+    author.addEventListener("input", validateAuthor);
+    author.addEventListener("blur", validateAuthor);
+
+    pages.addEventListener("input", validatePages);
+    pages.addEventListener("blur", validatePages);
+
+    return {
+        isValid() {
+            validateBooks();
+            validateTitle();
+            validateAuthor();
+            validatePages();
+
+            return (
+                books.checkValidity() &&
+                title.checkValidity() &&
+                author.checkValidity() &&
+                pages.checkValidity()
+            );
+        }
+    };
 }
