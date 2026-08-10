@@ -4,6 +4,9 @@ A digital library built as part of The Odin Project curriculum.
 
 This project allows users to create bookshelves with custom capacities, add books, view book information, track reading status, and remove books dynamically using JavaScript DOM manipulation.
 
+## Live Demo
+<img width="1920" height="881" alt="library" src="https://github.com/user-attachments/assets/f34140ff-6217-408e-88dc-5742729f4b62" />
+
 ## Features
 
 - Create bookshelves with custom capacities
@@ -53,9 +56,6 @@ During this project I practiced:
 - Search and filter books
 - Book cover customization
 - Responsive mobile layout
-
-## Live Demo
-<img width="1920" height="881" alt="library" src="https://github.com/user-attachments/assets/f34140ff-6217-408e-88dc-5742729f4b62" />
 
 ## Screenshot
 ![alt text](image.png)
