@@ -67,10 +67,6 @@ During this project I practiced:
 - Book cover customization
 - Responsive mobile layout
 
-## Screenshot
-
-![alt text](image.png)
-
 ## Author
 
 Rayssa Roberta
