@@ -1,10 +1,19 @@
 # Library
 
+🇺🇸 [English](#-english) · 🇧🇷 [Português](#-português)
+
+A digital library built as part of The Odin Project curriculum / Uma biblioteca digital construída como parte do currículo do The Odin Project.
+
+---
+
+## 🇺🇸 English
+
 A digital library built as part of The Odin Project curriculum.
 
 This project allows users to create bookshelves with custom capacities, add books, view book information, track reading status, and remove books dynamically using JavaScript DOM manipulation.
 
 ## Live Demo
+
 <img width="1920" height="881" alt="library" src="https://github.com/user-attachments/assets/f34140ff-6217-408e-88dc-5742729f4b62" />
 
 ## Features
@@ -19,6 +28,7 @@ This project allows users to create bookshelves with custom capacities, add book
 - Delete books using right-click
 - Hover over books to see reading status
 - Unique ID generation for every book
+
 ## Built With
 
 - HTML5
@@ -58,9 +68,11 @@ During this project I practiced:
 - Responsive mobile layout
 
 ## Screenshot
+
 ![alt text](image.png)
 
 ## Author
+
 Rayssa Roberta
 
 ## Figma 
@@ -82,3 +94,90 @@ Feel free to:
 - Add commits or commentaries in english
 
 Every contribution helps make the project better.
+
+---
+
+## 🇧🇷 Português
+
+Uma biblioteca digital construída como parte do currículo do The Odin Project.
+
+Este projeto permite que os usuários criem estantes com capacidades personalizadas, adicionem livros, visualizem informações dos livros, acompanhem o status de leitura e removam livros dinamicamente usando manipulação de DOM em JavaScript.
+
+## Demonstração ao Vivo
+
+<img width="1920" height="881" alt="library" src="https://github.com/user-attachments/assets/f34140ff-6217-408e-88dc-5742729f4b62" />
+
+## Funcionalidades
+
+- Criar estantes com capacidades personalizadas
+- Adicionar livros com:
+  - Título
+  - Autor
+  - Número de páginas
+  - Status Lido / Não Lido
+- Abrir livros para ver suas informações
+- Excluir livros usando clique com o botão direito
+- Passar o mouse sobre os livros para ver o status de leitura
+- Geração de ID único para cada livro
+
+## Tecnologias Usadas
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+## Conceitos Praticados
+
+- Manipulação de DOM
+- Event Listeners
+- Construtores de Objetos
+- Arrays e Armazenamento de Objetos
+- Criação Dinâmica de Elementos
+- Validação de Formulários
+- Geração de UUID com `crypto.randomUUID()`
+- Dados Personalizados Anexados a Elementos do DOM
+
+## O Que Aprendi
+
+Durante este projeto eu pratiquei:
+
+- Estruturar JavaScript em funções reutilizáveis
+- Conectar objetos de dados a elementos do DOM
+- Gerenciar atualizações dinâmicas de UI
+- Lidar com múltiplos tipos de eventos
+- Implementar funcionalidades do tipo CRUD
+- Trabalhar com referências de objetos dentro do DOM
+
+## Melhorias Futuras
+
+- Persistência com Local Storage
+- Editar informações dos livros
+- Seleção automática de estante quando uma delas ficar cheia
+- Menu de contexto personalizado em vez dos diálogos de confirmação do navegador
+- Busca e filtro de livros
+- Personalização da capa dos livros
+- Layout responsivo para mobile
+
+## Autora
+
+Rayssa Roberta
+
+## Figma 
+
+no link a seguir você pode ver a criação do meu layout no figma, incluindo partes futuras que podem ser adicionadas
+
+https://www.figma.com/design/kfQfAnbDQ7rrUrEC9YEWA7/Library?t=c4XtVPgaikrmIuhY-1
+
+## Contribuições
+
+Eu adoraria ouvir suas ideias para este projeto.
+
+Seja uma nova funcionalidade criativa, uma melhoria de UI, uma implementação melhor, ou até uma pequena sugestão, todo feedback é bem-vindo.
+
+Fique à vontade para:
+
+- Fazer um fork do projeto e abrir um Pull Request
+- Entrar em contato comigo pelo LinkedIn
+- Adicionar commits ou comentários em inglês
+
+Toda contribuição ajuda a tornar o projeto melhor.
