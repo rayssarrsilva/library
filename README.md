@@ -46,27 +46,6 @@ This project allows users to create bookshelves with custom capacities, add book
 - UUID Generation with `crypto.randomUUID()`
 - Custom Data Attached to DOM Elements
 
-## What I Learned
-
-During this project I practiced:
-
-- Structuring JavaScript into reusable functions
-- Connecting data objects with DOM elements
-- Managing dynamic UI updates
-- Handling multiple event types
-- Implementing CRUD-like functionality
-- Working with object references inside the DOM
-
-## Future Improvements
-
-- Local Storage persistence
-- Edit book information
-- Automatic shelf selection when one becomes full
-- Custom context menu instead of browser confirmation dialogs
-- Search and filter books
-- Book cover customization
-- Responsive mobile layout
-
 ## Author
 
 Rayssa Roberta
@@ -132,27 +111,6 @@ Este projeto permite que os usuários criem estantes com capacidades personaliza
 - Validação de Formulários
 - Geração de UUID com `crypto.randomUUID()`
 - Dados Personalizados Anexados a Elementos do DOM
-
-## O Que Aprendi
-
-Durante este projeto eu pratiquei:
-
-- Estruturar JavaScript em funções reutilizáveis
-- Conectar objetos de dados a elementos do DOM
-- Gerenciar atualizações dinâmicas de UI
-- Lidar com múltiplos tipos de eventos
-- Implementar funcionalidades do tipo CRUD
-- Trabalhar com referências de objetos dentro do DOM
-
-## Melhorias Futuras
-
-- Persistência com Local Storage
-- Editar informações dos livros
-- Seleção automática de estante quando uma delas ficar cheia
-- Menu de contexto personalizado em vez dos diálogos de confirmação do navegador
-- Busca e filtro de livros
-- Personalização da capa dos livros
-- Layout responsivo para mobile
 
 ## Autora
 
